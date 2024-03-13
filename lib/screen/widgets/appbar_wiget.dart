@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 AppBar appBarWidget({required String title}) {
   return AppBar(
     centerTitle: true,
-    title:  Text(
+    title: Text(
       title,
       style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
     ),
-    backgroundColor: Color.fromARGB(255, 101, 198, 243),
+    backgroundColor: const Color.fromARGB(255, 101, 198, 243),
   );
 }

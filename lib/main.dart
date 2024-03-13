@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'package:student_provider/database/model/model.dart';
 import 'package:student_provider/screen/controller/controller.dart';
 import 'package:student_provider/screen/student_list.dart';
-
 import 'database/boxes/boxes.dart';
 
 void main() async {
@@ -13,17 +12,15 @@ void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(StudentModelAdapter());
   box = await Hive.openBox<StudentModel>('StudentDetails');
-
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(/////////////////////////////////p
+    return ChangeNotifierProvider(
       create: (context) => StudentController(),
       child: GetMaterialApp(
         title: 'Flutter Demo',

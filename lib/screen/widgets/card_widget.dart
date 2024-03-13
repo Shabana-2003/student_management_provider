@@ -7,22 +7,20 @@ import 'package:student_provider/screen/widgets/edit_dialogue.dart';
 import '../../database/model/model.dart';
 import 'text_widget.dart';
 
-
 Card cardWidget(
     {required StudentModel details,
     required int index,
     required BuildContext context}) {
   final controller = Provider.of<StudentController>(context);
   return Card(
-    
-   color: Color.fromARGB(255, 139, 206, 243),
+    color: const Color.fromARGB(255, 139, 206, 243),
     elevation: 19,
     shadowColor: Colors.grey,
     child: Column(
       children: [
         const Spacer(),
         CircleAvatar(
-          radius: 40,
+          radius: 35,
           backgroundColor: Colors.white,
           backgroundImage: FileImage(
             File(
@@ -73,9 +71,10 @@ Card cardWidget(
               },
               icon: const Icon(
                 Icons.delete,
-                size: 40,
+                size: 30,
               ),
             ),
+            
             IconButton(
               onPressed: () {
                 showDialog(
@@ -88,7 +87,7 @@ Card cardWidget(
               },
               icon: const Icon(
                 Icons.edit,
-                size: 40,
+                size: 30,
               ),
             ),
           ],

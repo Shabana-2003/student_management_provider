@@ -15,15 +15,16 @@ editDialogue(
   var nameController = TextEditingController(text: details.name);
   var ageController = TextEditingController(text: details.age.toString());
   var rollNumberController =
-      TextEditingController(text: details.rollNumber.toString());
+  TextEditingController(text: details.rollNumber.toString());
   var formKey = GlobalKey<FormState>();
+
   final controller = Provider.of<StudentController>(context);
 
   return Center(
     child: SingleChildScrollView(
       child: AlertDialog(
         shadowColor: Colors.black,
-        title: Container(
+        title: SizedBox(
           width: 250,
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -88,9 +89,9 @@ editDialogue(
             onPressed: () {
               if (controller.selectedImage.isNotEmpty ||
                   details.imageUrl.isNotEmpty) {
-                print(index);
+               // print(index);
                 if (formKey.currentState!.validate()) {
-                  print(index);
+               // print(index);
                   int age = int.parse(ageController.text);
                   int rollNo = int.parse(rollNumberController.text);
                   Provider.of<StudentController>(
@@ -116,7 +117,7 @@ editDialogue(
                     'Success',
                     'Successfully Edited',
                     backgroundColor: const Color.fromARGB(106, 54, 244, 73),
-                    duration: Duration(microseconds: 800)
+                    duration:const Duration(microseconds: 800)
                   );
                 }
               }
@@ -126,6 +127,7 @@ editDialogue(
               style: TextStyle(color: Colors.black),
             ),
           ),
+          
           TextButton(
             onPressed: () {
               Get.back();

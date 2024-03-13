@@ -4,7 +4,6 @@ import 'package:hive/hive.dart';
 import '../../database/boxes/boxes.dart';
 import '../../database/model/model.dart';
 
-// StudentController controller = Get.put(StudentController());
 
 class StudentController extends ChangeNotifier {
   String selectedImage = '';

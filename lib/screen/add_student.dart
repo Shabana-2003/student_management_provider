@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
+//import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:provider/provider.dart';
 
 import '../core/constants.dart';
@@ -9,7 +9,7 @@ import '../database/model/model.dart';
 import 'controller/controller.dart';
 import 'widgets/appbar_wiget.dart';
 import 'widgets/image_picking.dart';
-import 'widgets/text_widget.dart';
+//import 'widgets/text_widget.dart';
 import 'widgets/textformfield_widget.dart';
 
 class AddStudent extends StatelessWidget {
@@ -85,6 +85,7 @@ class AddStudent extends StatelessWidget {
                                       listen: false)
                                   .selectedImage),
                         );
+
                         nameController.clear();
                         ageController.clear();
                         rollNumberController.clear();
@@ -107,14 +108,12 @@ class AddStudent extends StatelessWidget {
                     }
                   },
                   style: ButtonStyle(
-                    minimumSize: MaterialStateProperty.all(Size(150, 50)),
-                    backgroundColor: MaterialStatePropertyAll(
+                    minimumSize: MaterialStateProperty.all(const Size(150, 50)),
+                    backgroundColor:const MaterialStatePropertyAll(
                       Color.fromARGB(255, 59, 195, 222),
-                      
                     ),
-                  
                   ),
-                  child: Text('Create',style: TextStyle(fontSize: 17,color: Color.fromARGB(255, 232, 232, 232)),),
+                  child:const Text('Create',style: TextStyle(fontSize: 17,color: Color.fromARGB(255, 232, 232, 232)),),
                 )
               ],
             ),

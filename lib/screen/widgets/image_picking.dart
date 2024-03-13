@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-
 import '../controller/controller.dart';
 
 GestureDetector imagePicking({required BuildContext context}) {
   final controller = Provider.of<StudentController>(context, listen: false);
-  return GestureDetector(onTap: () {
+  return GestureDetector(
+    onTap: () {
     pickimage(context: context);
-  }, child: Consumer<StudentController>(
+  }, child: Consumer<StudentController>(//consumer
     builder: (context, value, child) {
       return GestureDetector(
         onTap: () {
